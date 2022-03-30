@@ -29,7 +29,8 @@ android {
 }
 
 dependencies {
-
+    implementation 'commons-net:commons-net:3.6'
+    implementation 'com.jcraft:jsch:0.1.51'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'

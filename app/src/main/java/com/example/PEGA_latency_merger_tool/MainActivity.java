@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -18,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(MainActivity.this,pingPage.class);
         startActivity(intent);
     }
-    public void go2Twamp(View view){
+    public void go2Latency(View view){
         Intent intent = new Intent();
-        intent.setClass(MainActivity.this,twampPage.class);
+        intent.setClass(MainActivity.this, e2eLatencyPage.class);
         startActivity(intent);
     }
     public void go2Trace(View view){

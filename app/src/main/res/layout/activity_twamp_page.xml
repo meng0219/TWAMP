@@ -4,235 +4,275 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".twampPage">
+    tools:context=".e2eLatencyPage">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textViewDest"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.4"
-            android:gravity="right"
-            android:text="Destination"/>
-
-        <EditText
-            android:id="@+id/editTextPostalAddressDst"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0"
-            android:ems="10"
-            android:inputType="textPostalAddress"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout1"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
-
-        <TextView
-            android:id="@+id/textViewPort"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.4"
-            android:gravity="right"
-            android:text="Port  "
-            android:visibility="visible"/>
-
-        <EditText
-            android:id="@+id/editTextNumberPort"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0"
-            android:ems="10"
-            android:inputType="number"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <TextView
-            android:id="@+id/textViewNumPkt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:gravity="right"
-            android:text="Total Packets"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="41dp" />
-
-        <SeekBar
-            android:id="@+id/seekBarNumPkt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:max="9999"
-            android:min="1"
-            android:progress="5" />
-
-        <EditText
-            android:id="@+id/editTextNumberNumPkt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:ems="10"
-            android:text="5"
-            android:inputType="number" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <TextView
-            android:id="@+id/textViewInter"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:gravity="right"
-            android:text="Interval(ms)"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="41dp" />
-
-        <SeekBar
-            android:id="@+id/seekBarInter"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:max="9999"
-            android:min="1"
-            android:progress="100" />
-
-        <EditText
-            android:id="@+id/editTextNumberInter"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:ems="10"
-            android:text="100"
-            android:inputType="number" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-        <TextView
-            android:id="@+id/textViewPayload"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:gravity="right"
-            android:text="PayLoad(byte)"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="41dp" />
-
-        <SeekBar
-            android:id="@+id/seekBarPayload"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:max="1472"
-            android:min="1"
-            android:progress="128" />
-
-        <EditText
-            android:id="@+id/editTextNumberPayload"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:ems="10"
-            android:text="128"
-            android:inputType="number" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/buttonCnt"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="connecting"
-        android:text="Start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCnt">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/linearLayoutRes"
+                android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"></LinearLayout>
-        </ScrollView>
+                android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+                <TextView
+                    android:id="@+id/textViewDest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="Destination" />
 
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/lineChart"
+                <EditText
+                    android:id="@+id/editTextPostalAddressDst"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:inputType="textPostalAddress" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></com.github.mikephil.charting.charts.LineChart>
-        </RelativeLayout>
-    </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textViewPort"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="Port  "
+                    android:visibility="visible" />
 
+                <EditText
+                    android:id="@+id/editTextNumberPort"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:inputType="number" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textViewNumPkt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="Total Packets"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBarNumPkt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:max="9999"
+                    android:min="1"
+                    android:progress="5" />
+
+                <EditText
+                    android:id="@+id/editTextNumberNumPkt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewNumBat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="Total Bats"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBarNumBat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:max="10"
+                    android:min="1"
+                    android:progress="5" />
+
+                <EditText
+                    android:id="@+id/editTextNumberNumBat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewPayload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="PayLoad(byte)"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPayload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:max="1472"
+                    android:min="1"
+                    android:progress="128" />
+
+                <EditText
+                    android:id="@+id/editTextNumberPayload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="128" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewPktInter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="Packet Interval(µs)"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPktInter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:max="999999"
+                    android:min="0"
+                    android:progress="10" />
+
+                <EditText
+                    android:id="@+id/editTextNumberPktInter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewBatInter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="Batch Interval(ms)"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <SeekBar
+                    android:id="@+id/seekBarBatInter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:max="2000"
+                    android:min="1"
+                    android:progress="1000" />
+
+                <EditText
+                    android:id="@+id/editTextNumberBatInter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="1000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonCnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="e2eLatency"
+                android:text="Start" />
+
+            <TextView
+                android:id="@+id/textViewExcept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <TableLayout
+                android:id="@+id/tableLayoutRes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:stretchColumns="*" />
+
+<!--            <LinearLayout-->
+<!--                xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="400dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <ScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+<!--                    <TableLayout-->
+<!--                        android:id="@+id/tableLayoutRes"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:stretchColumns="*" />-->
+<!--                </ScrollView>-->
+<!--            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

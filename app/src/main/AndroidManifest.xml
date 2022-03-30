@@ -3,6 +3,15 @@
     package="com.example.PEGA_latency_merger_tool">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.WRITE_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +24,7 @@
             android:name=".tracePage"
             android:label="Traceroute tool" />
         <activity
-            android:name=".twampPage"
+            android:name=".e2eLatencyPage"
             android:label="TWAMP tool" />
         <activity
             android:name=".pingPage"
